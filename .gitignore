@@ -19,6 +19,3 @@ node_modules/
 # Test temp and build files
 artifacts/
 dist/
-
-# Runtime generated config files
-config/config.js

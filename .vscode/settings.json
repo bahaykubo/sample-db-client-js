@@ -6,9 +6,9 @@
       "port": 5432,
       "driver": "PostgreSQL",
       "name": "localpostgres",
-      "database": "nok",
-      "username": "nok",
-      "password": "nok"
+      "database": "postgres",
+      "username": "user",
+      "password": "userpass"
     }
   ]
 }
