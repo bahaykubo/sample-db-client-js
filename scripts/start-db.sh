@@ -9,5 +9,5 @@ docker run --name postgresql \
   -e POSTGRES_USER=user \
   -e POSTGRES_PASSWORD=userpass \
   -p 5432:5432 \
-  -v /data:/var/lib/postgresql/data \
+  -v /database/postgresql:/var/lib/postgresql/data \
   -d postgres
