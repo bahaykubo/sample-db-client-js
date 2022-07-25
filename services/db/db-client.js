@@ -14,7 +14,7 @@ export class DBClient {
    * @param {string} [uri] - Set the database uri connection. Default to Config.postgresURI
    */
   constructor(uri) {
-    this.#db = new Sequelize(uri ?? Config.postgresURI);
+    this.#db = new Sequelize(uri ?? Config.postgresURI, { logging: Config.sequelize.logging });
   }
 
   /**
