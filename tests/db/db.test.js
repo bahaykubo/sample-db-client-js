@@ -1,16 +1,15 @@
 import { DBClient, DBDataBuilder } from '@services/db';
 import { expect } from 'chai';
 
-describe('Kafka DB Bridge', function () {
+describe('Kafka DB Bridge using sequelize orm library', function () {
   const dbClient = new DBClient();
-  const dbDataBuilder = new DBDataBuilder();
 
   after('Close db connection', async function () {
     await dbClient.closeConnection();
   });
 
   it('Should add new customers to db', async function () {
-    const newCustomers = dbDataBuilder.generateCustomerList(10);
+    const newCustomers = DBDataBuilder.generateCustomerList(10);
     await dbClient.addCustomers(newCustomers);
 
     const allCustomers = await dbClient.getCustomers();

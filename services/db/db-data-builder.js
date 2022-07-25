@@ -2,11 +2,13 @@ export class DBDataBuilder {
   /**
    * Generate a list of random customers
    *
+   * @static
+   *
    * @param {number} numberOfCustomers
    *
    * @returns {import('./models/customers').CustomerAttributes[]}
    */
-  generateCustomerList(numberOfCustomers) {
+  static generateCustomerList(numberOfCustomers) {
     const customers = [];
     for (let number = 0; number < numberOfCustomers; number++) {
       customers.push({
